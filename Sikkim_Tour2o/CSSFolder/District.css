@@ -1,0 +1,81 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+
+
+        position: absolute;
+    
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.tour-card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tour-img img {
+    width: 350px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tour-info {
+    padding: 20px;
+    flex: 1;
+}
+
+    .tour-info h2 {
+        margin: 0;
+        font-size: 22px;
+    }
+
+.rating {
+    color: #555;
+    margin: 5px 0;
+}
+
+.desc {
+    color: #666;
+    margin: 10px 0 20px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background: #333;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hotel-card {
+        flex-direction: column;
+    }
+
+    .tour-img img {
+        width: 100%;
+        height: 200px;
+    }
+}

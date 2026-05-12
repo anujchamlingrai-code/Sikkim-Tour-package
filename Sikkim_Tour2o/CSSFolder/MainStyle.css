@@ -1,0 +1,189 @@
+﻿*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+/* BASE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white !important;
+}
+
+html {
+    background: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    top: -7px;
+    z-index: 1000;
+    background-color: black; /* BLACK NAVBAR */
+    backdrop-filter: blur(10px);
+    }
+
+/* LOGO */
+.logo {
+    flex-shrink: 0;
+    left: 20px;
+    top: -20px;
+}
+
+.side {
+    margin-right: 20px;
+}
+
+/* NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    .nav-links li {
+        flex-shrink: 0;
+    }
+
+        .nav-links li a {
+            color: white; /* WHITE TEXT (VISIBLE) */
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 14px;
+            white-space: nowrap;
+            position: relative;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+            /* UNDERLINE */
+            .nav-links li a::after {
+                content: "";
+                position: absolute;
+                width: 0%;
+                height: 2px;
+                background: white;
+                left: 0;
+                bottom: -3px;
+                transition: 0.3s;
+            }
+
+            .nav-links li a:hover::after {
+                width: 100%;
+            }
+
+            /* HOVER EFFECT */
+            .nav-links li a:hover {
+                color: black;
+                background: white;
+                text-shadow: none;
+            }
+
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+    .menu-toggle span {
+        display: block;
+        height: 3px;
+        width: 26px;
+        background: white; /* WHITE for black navbar */
+        border-radius: 2px;
+        transition: all 0.4s;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px,5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px,-5px);
+    }
+
+/* CONTENT */
+.content {
+    padding-top: 90px;
+    text-align: center;
+    color: #000;
+    background: white;
+}
+
+/* SECTIONS */
+section, .container, main, .hero, .adventure-section {
+    background: white;
+}
+
+/* FOOTER */
+.footer {
+  
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.social-icons a {
+    color: black;
+    margin: 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+    .social-icons a:hover {
+        color: #000;
+        text-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        left: auto;
+        transform: none;
+        width: 100%;
+        flex-direction: column;
+        background: black; /* MOBILE MENU BLACK */
+        gap: 15px;
+        transition: right 0.4s ease;
+        padding: 32px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+        .nav-links li {
+            text-align: center;
+        }
+
+        .nav-links.active {
+            right: 0;
+        }
+
+    .menu-toggle {
+        display: flex;
+    }
+}

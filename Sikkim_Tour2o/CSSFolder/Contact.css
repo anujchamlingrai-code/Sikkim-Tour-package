@@ -1,0 +1,227 @@
+﻿/* CONTACT PAGE CSS */
+body {
+    position: fixed;
+}
+.contact-middle {
+    min-height: calc(100vh - 140px);
+    padding: 60px 20px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    background-color:black;
+    margin-bottom: 60px;
+}
+
+.contact-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 247, 255, 0.3);
+    padding: 35px;
+}
+
+    .contact-card h2 {
+        color: #00f7ff;
+        text-align: center;
+        margin-bottom: 8px;
+        font-size: 1.8rem;
+    }
+
+    .contact-card > p {
+        text-align: center;
+        color: #fff;
+        opacity: 0.7;
+        margin-bottom: 30px;
+    }
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+    .detail-item:hover {
+        background: rgba(0, 247, 255, 0.1);
+        transform: translateY(-3px);
+    }
+
+    .detail-item i {
+        font-size: 28px;
+        color: #00f7ff;
+    }
+
+    .detail-item div h4 {
+        color: #fff;
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+
+    .detail-item div span {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.85rem;
+    }
+
+/* Guides Section */
+.guides-section {
+
+    margin-top: 20px;
+}
+
+.guides-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+    .guides-header h2 {
+        color: black;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .guides-header p {
+        color: #fff;
+        opacity: 0.8;
+    }
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.guide-card {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 247, 255, 0.2);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+    .guide-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(0, 247, 255, 0.5);
+        box-shadow: 0 10px 30px rgba(0, 247, 255, 0.2);
+    }
+
+.guide-image {
+    height: 280px;
+    overflow: hidden;
+}
+
+    .guide-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s;
+    }
+
+.guide-card:hover .guide-image img {
+    transform: scale(1.05);
+}
+
+.guide-info {
+    padding: 20px;
+}
+
+    .guide-info h3 {
+        color: #00f7ff;
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+.guide-role {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.guide-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+    .guide-contact i {
+        color: #00f7ff;
+    }
+
+.guide-experience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #ffc107;
+    font-size: 0.85rem;
+}
+
+    .guide-experience span {
+        color: rgba(255, 255, 255, 0.6);
+        margin-left: 5px;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 25px;
+    }
+
+        .contact-card h2{
+            color:black;
+        }
+        .guides-header h2 {
+            font-size: 1.5rem;
+        }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .guides-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-middle {
+        padding: 40px 15px;
+    }
+
+    .contact-card {
+        color:black;
+        padding: 20px;
+    }
+
+    .detail-item {
+        padding: 12px;
+    }
+
+    .guide-image {
+        height: 240px;
+    }
+
+    .guide-info h3 {
+        font-size: 1.1rem;
+    }
+}

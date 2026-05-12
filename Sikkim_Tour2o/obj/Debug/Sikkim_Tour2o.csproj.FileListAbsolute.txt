@@ -1,0 +1,2 @@
+C:\Users\intel\source\repos\Sikkim_Tour2o\Sikkim_Tour2o\obj\Debug\Sikkim_Tour2o.csproj.AssemblyReference.cache
+C:\Users\intel\source\repos\Sikkim_Tour2o\Sikkim_Tour2o\obj\Debug\Sikkim_Tour2o.csproj.CoreCompileInputs.cache

@@ -1,0 +1,133 @@
+﻿body {
+    position: relative;
+}
+   
+/* TOUR PLACES SECTION */
+.tour-places-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.tour-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tour-card {663213
+    flex: 1;
+    min-width: 300px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .tour-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 247, 255, 0.2);
+        border-color: rgba(0, 247, 255, 0.3);
+    }
+
+.tour-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+    .tour-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+.tour-card:hover .tour-image img {
+    transform: scale(1.05);
+}
+
+.tour-content {
+    padding: 25px;
+}
+
+.tour-title {
+    color: #00f7ff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.tour-description {
+    color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.tour-btn {
+    background: transparent;
+    border: 2px solid #00f7ff;
+    color: #00f7ff;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .tour-btn:hover {
+        background: #00f7ff;
+        color: #1e1e1e;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tour-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .tour-card {
+        min-width: 100%;
+    }
+
+    .tour-content {
+        padding: 20px;
+    }
+
+    .tour-title {
+        font-size: 1.3rem;
+    }
+
+    .tour-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tour-places-section {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+
+    .tour-content {
+        padding: 18px;
+    }
+
+    .tour-title {
+        font-size: 1.2rem;
+    }
+
+    .tour-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
